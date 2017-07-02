@@ -14,6 +14,7 @@
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (nonatomic,strong) UIButton *SaveBtn;
 
 //创建App对应的自定义相册。
 -(PHAssetCollection *)createdCollection;
