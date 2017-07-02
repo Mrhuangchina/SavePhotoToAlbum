@@ -14,11 +14,14 @@
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (nonatomic ,strong) UIButton * SaveButton;
 
 //创建App对应的自定义相册。
 -(PHAssetCollection *)createdCollection;
 //返回那张保存到相机胶卷的那张图片
 -(PHFetchResult<PHAsset *> *)createdAssets;
+
+
 
 @end
 
@@ -27,12 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
 
-    
-    
-    
-    
     
 }
 
@@ -79,7 +77,7 @@
     
     if (error) {
         
-        [SVProgressHUD showErrorWithStatus:@"创建自定义相册失败!"];
+        [SVProgressHUD showErrorWithStatus:@"创建自定义相册失败!!!"];
         
         return nil;
     }
